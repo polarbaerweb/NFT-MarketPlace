@@ -1,7 +1,6 @@
 import fileinclude from "gulp-file-include";
 import webpHtmlNosvg from "gulp-webp-html-nosvg";
 import versionNumber from "gulp-version-number";
-""
 
 export const combine_html = ()=> {
 	return app.gulp.src(app.path.src.html)
