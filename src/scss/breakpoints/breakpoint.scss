@@ -1,0 +1,15 @@
+$mobile_S: 320.5px;
+$mobile_M: 375.5px;
+$mobile_L: 425.5px;
+$laptop: 1024.5px;
+$tablet: 768.5px;
+
+@media(max-width: $mobile_S){}
+
+@media(max-width: $mobile_M){}
+
+@media(max-width: $mobile_L){}
+
+@media(max-width: $laptop){}
+
+@media(max-width: $tablet){}

@@ -11,7 +11,7 @@ export const combine_html = ()=> {
 			})
 		))
 		.pipe(fileinclude({prefix: "@"}))
-		.pipe(app.plugins.replace(/@img\//g, 'img/'))
+		.pipe(app.plugins.replace(/@img\//g, './img/'))
 		.pipe(webpHtmlNosvg())
 		.pipe(
 			versionNumber({
@@ -30,4 +30,5 @@ export const combine_html = ()=> {
 			})
 		)
 		.pipe(app.gulp.dest(app.path.build.html))
+		.pipe(app.plugins.browsersync.stream())
 }

@@ -1,0 +1,63 @@
+@import "./size";
+@import "./font_properties";
+
+*, *::before, *::after{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	border: none;
+	text-decoration: none;
+	list-style: none;
+	outline: none;
+}
+
+*:focus{
+	outline: none;
+	padding: 0;
+	margin: 0;
+}
+
+h1,h2,h3,h4,h5,h6{
+	margin: 0;
+	padding: 0;
+}
+
+a,
+a:link,
+a:hover,
+a:active,
+a:visited,
+a:focus{
+	outline: none;
+	color: #000;
+	text-decoration: none;
+}
+
+input, textarea, button{
+	padding: 0;
+}
+
+html{
+	font-size: $default-font-size;
+	font-family: $default-font-family;
+}
+
+body{
+	width: 100vw;
+	height: 100vh;
+	overflow-x: hidden;
+}
+
+.wrapper{
+	width: 100%;
+	height: 100%;
+	display: grid;
+	grid-auto-flow: row;
+	grid-auto-rows: $default-header-height $default-main-height $default-footer-height;
+}
+
+._container{
+	width: $base-container-width;
+	margin: 0 auto;
+}
+
