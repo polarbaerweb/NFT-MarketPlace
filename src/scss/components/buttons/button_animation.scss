@@ -1,0 +1,15 @@
+.navigation-button:active{
+	animation: .4s linear scale;
+}
+
+@keyframes scale {
+	50%{
+		transform: scale(0.9);
+		background-color: rgba(getColorByName("button", "button-base-bg-color"), .5);
+	}
+	
+	100%{
+		transform: scale(1);
+		background-color: rgba(getColorByName("button", "button-base-bg-color"), 1);
+	}
+}

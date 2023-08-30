@@ -1,0 +1,31 @@
+@use "sass:math";
+
+$area: (
+	"hd": $header-color,
+	"mn": $main-color,
+	// "ft": $footer-color,
+	"button": $button-color,
+);
+
+
+$container-width: (
+	"base-container": $base-container-width,
+	"discover-digital-container": $discover-digital-container,
+);
+
+
+@function getColorByName($selected-area, $name) {
+	$selected-block: map-get($area, $selected-area);
+	@return map-get($selected-block, $name)
+};
+
+@function resize($from, $to) {
+	$converted-to-rem: $to * 0.1rem;
+	@return calc($converted-to-rem + ($from - $to) * ((100vw - 320px) / ($base-container-width - 320)))
+};
+
+@function getWidthOfContainer($container-name){
+	$selected-container: map-get($container-width, $container-name);
+	$half-width: (math.div($selected-container, $size-of-the-screen) * 100) * 1%;
+	@return $half-width;
+};

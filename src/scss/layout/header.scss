@@ -1,0 +1,199 @@
+$list-item-vertical-padding: 5px;
+
+.header {
+	background-color: getColorByName("hd", "header-bg-color");
+	position: fixed;
+	width: 100%;
+	padding: resize(15, 10) 0;
+	z-index: 1;
+	
+	&__container {
+		height: 100%;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__logo_box {
+		flex: 0 1 30%;
+		display: flex;
+		align-items: center;
+		gap: resize(12, 7);
+		@include breakpoint{
+			flex: 1 1 auto;
+		}
+	}
+
+	&__logo{
+		font-size: resize(32, 16);
+		color: getColorByName("hd", "website-logo-color");
+	}
+
+	&__title {
+		color: getColorByName("hd", "header-title-color");
+		font-size: resize(19, 14);
+		font-family: $space-mono;
+		line-height: 140%;
+	}
+
+	&__navigation {
+		flex: 0 1 70%;
+		@include breakpoint {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 70%;
+			height: 100%;
+			visibility: hidden;
+		}
+	}
+
+	&__navigation--active{
+		@include breakpoint{
+			transition: all .2s ease-in-out;
+			visibility: visible;
+			background-color: getColorByName("hd", "header-bg-color");
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+	}
+
+	
+	&__list {
+		height: 100%;
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		flex-wrap: wrap;
+		@include breakpoint {
+			opacity: 0;
+			visibility: hidden;
+
+		}
+	}
+	
+	&__list--active{
+		transition: opacity .4s ease-in-out;
+		width: 70%;
+		height: 70%;
+		@include breakpoint{
+			padding: resize(20, 15);
+			opacity: 1;
+			visibility: visible;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: flex-start;
+			gap: $list-item-vertical-padding + 5px;
+			overflow-y: auto;
+			overflow-x: hidden;
+		}
+	}
+
+	&__list-item {
+		padding: $list-item-vertical-padding resize(8, 6);
+		background-color: rgba(0, 0, 0, 0);
+		position: relative;
+	}
+
+	&__list-item::before{
+		content: "";
+		display: block;
+		width: 0;
+		height: 0;
+	}
+	
+	&__list-item:not(:last-child):hover::before{
+		transition: all .3s ease-in-out;
+		position: absolute;
+		top: 100%;
+		left: resize(8, 6);
+		content: "";
+		width: 60%;
+		height: 1px;
+		background-color: getColorByName("hd", "header-link-hover");
+	}
+
+	&__link {
+		color: getColorByName("hd", "header-link-color");
+		font-size: resize(16, 10);
+		font-style: normal;
+		font-weight: 600;
+	}
+
+	&__auth{
+		padding: 0 resize(30, 20);
+	}
+
+};
+
+// base burger-style
+.burger {
+	z-index: 2;
+	display: none;
+	cursor: pointer;
+	@include breakpoint{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 24;
+		height: 24px;
+
+		&__item{
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: flex-start;
+			gap: 5px;
+			position: relative;
+			top: 0;
+			left: 0;
+		}
+
+		&__item--active{
+			gap: 0;
+	
+			&::before,
+			&::after {
+				width: resize(12.75, 9);
+			}
+	
+			&::before {
+				transform: rotate(45deg);
+				position: relative;
+				top: 1px;
+				left: 0;
+			}
+	
+			&::after {
+				transform: rotate(-45deg);
+				position: relative;
+				bottom: 0;
+				left: 0;
+			}
+		}
+
+		&__second-line,
+		&__item::before,
+		&__item::after {
+			content: "";
+			display: inline-block;
+			width: resize(12.75, 9);
+			height: .5px;
+			background-color: #fff;
+			transition: all .4s ease-in-out;
+		};
+
+		// according to the design
+		// you can comment it if you do not need
+		&__second-line--larger{
+			width: resize(18, 15);
+		}
+		&__second-line--active{
+			transform: scale(0);
+		}
+	}
+}
+

@@ -1,15 +1,16 @@
-$mobile_S: 320.5px;
-$mobile_M: 375.5px;
-$mobile_L: 425.5px;
-$laptop: 1024.5px;
-$tablet: 768.5px;
+$breakpoints-size: (
+	"mobile_S": 320.5px,
+	"mobile_M": 375.5px,
+	"mobile_L": 425.5px,
+	"laptop": 1024.5px,
+	"tablet": 768.5px,
+);
 
-@media(max-width: $mobile_S){}
+@mixin breakpoint($device: "tablet", $additional_size: 0px){
+	$max_width: map-get($breakpoints-size, $device);
+	$max_width: $max_width + $additional_size;
 
-@media(max-width: $mobile_M){}
-
-@media(max-width: $mobile_L){}
-
-@media(max-width: $laptop){}
-
-@media(max-width: $tablet){}
+	@media(max-width: $max-width) {
+		@content
+	}
+};

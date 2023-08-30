@@ -1,0 +1,246 @@
+.main {
+	&-section {
+		max-width: getWidthOfContainer("discover-digital-container");
+	};
+
+
+	&-section:not(:first-child){
+		margin: resize(80, 70) auto;
+		@include breakpoint("tablet"){}
+	}
+
+	&-section:first-child{
+		margin: resize(162, 130) auto 80px auto;
+		@include breakpoint("laptop", 146){
+			margin: resize(100, 85) auto 80px auto;
+		}
+	}
+
+	&__discover {
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-between;
+		gap: resize(30, 20);
+		@include breakpoint("laptop", 146){
+			display: grid;
+			grid-template-rows: max-content 1fr;
+			grid-auto-columns: 100%;
+		}
+	}
+
+
+	&__text-box {
+		flex: 0 1 resize(610, 450);
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: resize(30, 20);
+		overflow: hidden;
+		@include breakpoint("mobile_M", 270){
+			width: resize(330, 300);
+		}
+	}
+
+
+	&__discover-title {
+		font-family: $default-font-family;
+		font-size: resize(67, 38);
+		font-style: normal;
+		font-weight: 600;
+		line-height: 110%;
+		text-transform: capitalize;
+		color: getColorByName("mn", "main-title-color");
+		@include breakpoint("laptop"){
+			font-size: resize(38, 28);
+		}
+	}
+
+
+	&__text {
+		color: getColorByName("mn", "main-default-description-color");
+		font-family: $default-font-family;
+		font-size: resize(22, 18);
+		font-style: normal;
+		font-weight: 400;
+		line-height: 160%;
+		text-transform: capitalize;
+	}
+
+	&__discover-button{
+		padding: 0 resize(50, 45);
+	}
+
+	&__achievements {
+		display: flex;
+		align-items: center;
+		gap: resize(30, 20);
+		@include breakpoint("laptop", 270){
+			flex-wrap: wrap;
+		}
+	}
+
+
+	&__achievement-item {
+		width: resize(150, 130);
+		@include breakpoint("laptop", 270px){
+			width: resize(90, 70);
+		}
+	}
+
+
+	&__achievement-result {
+		color: getColorByName("mn", "main-result-color");
+		font-family: $space-mono;
+		font-size: resize(28, 20);
+		font-style: normal;
+		font-weight: 700;
+		line-height: 140%;
+		text-transform: capitalize;
+		@include breakpoint("laptop", 270px){
+			font-size: resize(22, 16);
+		}
+	}
+	
+
+	&__image-box {
+		flex: 0 0 resize(510, 450);
+		height: resize(510, 480);
+		background-color: getColorByName("mn", "main-image-background-color");
+		border-radius: 20px;
+		@include breakpoint("laptop", 29px){
+			height: resize(330, 300);
+		};
+	}
+
+	&__image-container{
+		width: 100%;
+		height: 401px;
+		@include breakpoint("laptop", 29px){
+			min-width: 100%;
+			height: 221px;
+		}
+	}
+
+	&__image {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		border-radius: 20px 20px 0 0;
+	}
+
+
+	&__image-title-box {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+	}
+
+	&__discover-title-box{
+		padding: resize(20, 15);
+	}
+
+	&__image-title{
+		font-family: $default-font-family;
+		font-size: resize(22, 18);
+		font-style: normal;
+		font-weight: 600;
+		line-height: 140%;
+		text-transform: capitalize;
+		color: getColorByName("mn", "main-image-title-color");
+		
+	}
+
+
+	&__image-author-box {
+		display: flex;
+		align-items: center;
+		gap: 12px;
+	}
+
+	&__image-author-name {
+		color: getColorByName("mn", "main-author-name-color");
+		font-family: $default-font-family;
+		font-size: resize(16, 10);
+		font-style: normal;
+		font-weight: 400;
+		line-height: 140%;
+	}
+	
+	&__image-author{
+		width: 24px;
+		height: 24px;
+	}
+
+	
+
+	&__trending-collection {
+		padding: resize(80, 70) 0;
+	}
+
+	&__text-box--lower-gap {
+		gap: 10px;
+		margin-bottom: 60px;
+	}
+
+
+	&__trending-collection-title {
+		@extend .main__discover-title;
+		line-height: 120%;
+		font-size: resize(38, 10);
+	}
+
+
+	&__trending-text {}
+
+
+	&__trending-images {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-auto-rows: 1fr;
+		gap: 30px;
+		justify-content: space-between;
+	}
+
+	&__trending-images-box {
+		width: 100%;
+		min-height: 525px;
+		display: flex;
+		flex-direction: column;
+		gap: 15px;
+	}
+
+	&__trending-image{
+		width: 100%;
+		height: 330px;
+		object-fit: cover;
+		border-radius: 20px;
+	}
+
+
+	&__trending-images-container {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-auto-rows: 1fr;
+		gap: 15px;
+	}
+
+	&__trending-image-job {
+		border-radius: 20px;
+		height: 100px;
+		width: 100%;
+		object-fit: cover;
+	}
+
+	&__trending-additional-jobs {
+		width: 100%;
+		height: 100px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: getColorByName("mn", "main-additional-job-color");
+	}
+
+
+	&__trending-image-title-box {}
+
+}

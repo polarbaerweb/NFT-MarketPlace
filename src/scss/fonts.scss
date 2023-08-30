@@ -1,36 +1,30 @@
 @font-face {
-	font-family: Roboto;
+	font-family: icomoon;
 	font-display: swap;
-	src: url("../fonts/Roboto-Black.woff2") format("woff2"), url("../fonts/Roboto-Black.woff");
+	src: url("../fonts/icomoon.woff2") format("woff2"), url("../fonts/icomoon.woff");
 	font-weight: 400;
 	font-style: normal;}
 @font-face {
-	font-family: Roboto;
+	font-family: SpaceMono;
 	font-display: swap;
-	src: url("../fonts/Roboto-Bold.woff2") format("woff2"), url("../fonts/Roboto-Bold.woff");
+	src: url("../fonts/SpaceMono-Bold.woff2") format("woff2"), url("../fonts/SpaceMono-Bold.woff");
 	font-weight: 700;
 	font-style: normal;}
 @font-face {
-	font-family: Roboto;
+	font-family: SpaceMono;
 	font-display: swap;
-	src: url("../fonts/Roboto-Light.woff2") format("woff2"), url("../fonts/Roboto-Light.woff");
-	font-weight: 300;
-	font-style: normal;}
-@font-face {
-	font-family: Roboto;
-	font-display: swap;
-	src: url("../fonts/Roboto-Medium.woff2") format("woff2"), url("../fonts/Roboto-Medium.woff");
-	font-weight: 500;
-	font-style: normal;}
-@font-face {
-	font-family: Roboto;
-	font-display: swap;
-	src: url("../fonts/Roboto-Regular.woff2") format("woff2"), url("../fonts/Roboto-Regular.woff");
+	src: url("../fonts/SpaceMono-Regular.woff2") format("woff2"), url("../fonts/SpaceMono-Regular.woff");
 	font-weight: 400;
 	font-style: normal;}
 @font-face {
-	font-family: Roboto;
+	font-family: WorkSans;
 	font-display: swap;
-	src: url("../fonts/Roboto-Thin.woff2") format("woff2"), url("../fonts/Roboto-Thin.woff");
-	font-weight: 100;
+	src: url("../fonts/WorkSans-Regular.woff2") format("woff2"), url("../fonts/WorkSans-Regular.woff");
+	font-weight: 400;
+	font-style: normal;}
+@font-face {
+	font-family: WorkSans;
+	font-display: swap;
+	src: url("../fonts/WorkSans-SemiBold.woff2") format("woff2"), url("../fonts/WorkSans-SemiBold.woff");
+	font-weight: 600;
 	font-style: normal;}

@@ -1,14 +1,42 @@
+// color
+@import "color";
+@import "./color/header_color";
+@import "./color/main_color";
+@import "./color/button_color";
+
+// container width
+@import "./container_width";
+
+// functions
+@import "./functions/base_functions";
+
+// breakpoint
+@import "./breakpoints/breakpoint";
+
+// fonts
 @import "fonts";
-@import "./reset_default_style/reset";
-@import "./layout/base-layout/header";
-@import "./layout/base-layout/main";
-@import "./layout/base-layout/footer";
+@import "./icon_font";
+@import "./fonts/icon";
+@import "./fonts/font_properties";
+
+// components
 @import "./components/aside/base_aside";
 @import "./components/buttons/base_button.scss";
 @import "./components/cards/base_cards";
 @import "./components/error/base_error";
 @import "./components/modal/base_modal";
 @import "./components/success/base_success";
+
+// reset
+@import "./reset_size";
+@import "./reset";
+
+// layout
+@import "./layout/header";
+@import "./layout/main";
+@import "./layout/footer";
+
+// features
 @import "./features/login/login";
 @import "./features/logout/logout";
 @import "./features/signup/signup";

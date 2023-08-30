@@ -1,0 +1,51 @@
+%ic{
+	font-family: "icons";
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: normal;
+	line-height: 1;
+}
+
+[class*="_icon-"]{
+	&::before{
+		@extend %ic;
+		display: block;
+	}
+}
+
+._icon-copy:before {
+	content: "\e900";
+}
+
+._icon-email:before {
+	content: "\e901";
+}
+
+._icon-eye:before {
+	content: "\e902";
+}
+
+._icon-globe:before {
+	content: "\e903";
+}
+
+._icon-lockKey:before {
+	content: "\e904";
+}
+
+._icon-rocket:before {
+	content: "\e905";
+}
+
+._icon-search:before {
+	content: "\e906";
+}
+
+._icon-user:before {
+	content: "\e907";
+}
+
+._icon-WebSiteLogo:before {
+	content: "\e908";
+}

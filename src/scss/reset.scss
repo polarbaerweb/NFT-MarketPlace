@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600&display=swap');
+
+
+*, *::before, *::after{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	border: none;
+	text-decoration: none;
+	list-style: none;
+	outline: none;
+}
+
+*:focus{
+	outline: none;
+	padding: 0;
+	margin: 0;
+}
+
+h1,h2,h3,h4,h5,h6{
+	margin: 0;
+	padding: 0;
+}
+
+a,
+a:link,
+a:hover,
+a:active,
+a:visited,
+a:focus{
+	outline: none;
+	text-decoration: none;
+}
+
+input, textarea, button{
+	padding: 0;
+}
+
+html{
+	font-size: $default-font-size;
+	font-family: $default-font-family;
+}
+
+body{
+	width: 100vw;
+	height: 100vh;
+	overflow-x: hidden;
+	background-color: $default-bg-color;
+}
+
+body.lock::-webkit-scrollbar{
+	display: none;
+}
+
+body.lock{
+	overflow-y: hidden;
+}
+
+.wrapper{
+	width: 100%;
+	height: 100%;
+	display: grid;
+	grid-auto-flow: row;
+	grid-auto-rows: $default-header-height $default-main-height $default-footer-height;
+}
+
+[class$="__container"]{
+	max-width: getWidthOfContainer("base-container");
+	margin: 0 auto;
+	padding: 0 1rem;
+}
+
+.section-description {
+	color: getColorByName("mn", "default-description-color");
+	font-family: Work Sans;
+	font-size: resize(23.95, 18);
+	font-style: normal;
+	font-weight: 400;
+	line-height: 160%;
+	text-transform: capitalize;
+
+	@include breakpoint("laptop", 270px) {
+		font-size: resize(16, 13);
+	}
+
+	color: $default-section-description-color;
+}

@@ -7,12 +7,143 @@
 	<div class="wrapper">
 		@include('html/base/header.html')
 		<main class="main">
-			<div class="main__container _container">
+			<div class="main__container">
+				<section class="main__discover main-section">
+					<div class="main__text-box">
+						<h2 class="main__discover-title">
+							Discover digital art &amp;&nbsp;Collect NFTs
+						</h2>
+						<p class="main__discover-text section-description">
+							NFT marketplace&nbsp;UI created with Anima for Figma. Collect, buy and sell art from more than 20k NFT artists.
+						</p>
+						<button class="navigation-button">
+							<a href="#" class="_icon-rocket main__discover-button button-flexed">Get Started</a>
+						</button>
+						<div class="main__achievements">
+							<div class="main__achievement-item">
+								<h3 class="main__achievement-result">
+									240+
+								</h3>
+								<p class="section-description main__discover-description">
+									Total Sale
+								</p>
+							</div>
+							<div class="main__achievement-item">
+								<h3 class="main__achievement-result">
+									240+
+								</h3>
+								<p class="section-description main__discover-description">
+									Total Sale
+								</p>
+							</div>
+							<div class="main__achievement-item">
+								<h3 class="main__achievement-result">
+									240+
+								</h3>
+								<p class="section-description main__discover-description">
+									Total Sale
+								</p>
+							</div>
+						</div>
+					</div>
+					<figure class="main__image-box">
+						<div class="main__image-container">
+							<img src="@img/content/space-walking.png" alt="main image" class="main__image">
+						</div>
+						<figcaption class="main__image-title-box main__discover-title-box">
+							<h4 class="main__image-title">
+								Space Walking
+							</h4>
+							<div class="main__image-author-box">
+								<img src="@img/icons/authors/author-animakid.svg" alt="author image"
+									class="main__image-author">
+								<p class="main__image-author-name">
+									Animakid
+								</p>
+							</div>
+						</figcaption>
+					</figure>
+				</section>
+				<section class="main__trending-collection main-section">
+					<div class="main__text-box main__text-box--lower-gap">
+						<h3 class="main__trending-collection-title main-title">
+							Trending Collection
+						</h3>
+						<p class="main__trending-text section-description">
+							Checkout our weekly updated trending collection.
+						</p>
+					</div>
+					<div class="main__trending-images">
+						<figure class="main__trending-images-box">
+							<img src="@img/content/trending-images/dog-big.jpg" alt="big dog image" class="main__trending-image">
+							<div class="main__trending-images-container">
+								<img src="@img/content/trending-images/fox-big.jpg" alt="fox image" class="main__trending-image-job">
+								<img src="@img/content/trending-images/bear.jpg" alt="bear image" class="main__trending-image-job">
+								<a class="main__trending-additional-jobs navigation-button">
+									1025+
+								</a>
+							</div>
+							<figcaption class="main__trending-image-title-box main__image-title-box ">
+								<h5 class="main__image-title">
+									DSGN Animals
+								</h5>
+								<div class="main__image-author-box">
+									<img src="@img/icons/authors/author-animakid.svg" alt="author image" class="main__image-author">
+									<p class="main__image-author-name">
+										Animakid
+									</p>
+								</div>
+							</figcaption>
+						</figure>
+						<figure class="main__trending-images-box">
+							<img src="@img/content/trending-images/dog-big.jpg" alt="big dog image"  class="main__trending-image">
+							<div class="main__trending-images-container">
+								<img src="@img/content/trending-images/fox-big.jpg" alt="fox image" class="main__trending-image-job">
+								<img src="@img/content/trending-images/bear.jpg" alt="bear image" class="main__trending-image-job">
+								<a class="main__trending-additional-jobs navigation-button">
+									1025+
+								</a>
+							</div>
+							<figcaption class="main__trending-image-title-box main__image-title-box ">
+								<h5 class="main__image-title">
+									DSGN Animals
+								</h5>
+								<div class="main__image-author-box">
+									<img src="@img/icons/authors/author-animakid.svg" alt="author image" class="main__image-author">
+									<p class="main__image-author-name">
+										Animakid
+									</p>
+								</div>
+							</figcaption>
+						</figure>
+						<figure class="main__trending-images-box">
+							<img src="@img/content/trending-images/dog-big.jpg" alt="big dog image"  class="main__trending-image">
+							<div class="main__trending-images-container">
+								<img src="@img/content/trending-images/fox-big.jpg" alt="fox image" class="main__trending-image-job">
+								<img src="@img/content/trending-images/bear.jpg" alt="bear image" class="main__trending-image-job">
+								<a class="main__trending-additional-jobs navigation-button">
+									1025+
+								</a>
+							</div>
+							<figcaption class="main__trending-image-title-box main__image-title-box ">
+								<h5 class="main__image-title">
+									DSGN Animals
+								</h5>
+								<div class="main__image-author-box">
+									<img src="@img/icons/authors/author-animakid.svg" alt="author image" class="main__image-author">
+									<p class="main__image-author-name">
+										Animakid
+									</p>
+								</div>
+							</figcaption>
+						</figure>
+					</div>
+				</section>
 			</div>
 		</main>
 		@include('html/base/footer.html')
 	</div>
 
-	<script src="js/app.min.js"></script>
+	<script src="js/app.min.js" defer></script>
 </body>
 </html>

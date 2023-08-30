@@ -1,4 +1,5 @@
 import * as webp from "./base_modules/webp_extension_handler.js";
+import * as burger from "./base_modules/burger.js"
 import * as aside from "./aside_handler/aside_handler.js";
 import * as card from "./card_handler/card_handler.js";
 import * as form from "./forms_handler/form_handler.js"
