@@ -1,8 +1,12 @@
-.navigation-button:active{
-	animation: .4s linear scale;
+.navigation-button:not(:has( > a.button-outlined-link)):active{
+	animation: .4s linear scale-button;
 }
 
-@keyframes scale {
+.navigation-button:not(:has(.button-outlined)):hover::before{
+	transform: scaleY(0.5);
+}
+
+@keyframes scale-button {
 	50%{
 		transform: scale(0.9);
 		background-color: rgba(getColorByName("button", "button-base-bg-color"), .5);
@@ -13,3 +17,4 @@
 		background-color: rgba(getColorByName("button", "button-base-bg-color"), 1);
 	}
 }
+

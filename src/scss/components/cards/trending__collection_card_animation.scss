@@ -1,0 +1,37 @@
+.main{
+	&__trending-link{
+		position: relative;
+		top: 0;
+		left: 0;
+	}
+	
+	&__trending-link:not(:has(.main__trending-image-job))::after{
+		content: "";
+		text-align: center;
+		color: #fff;
+		position: absolute;
+		top: 0;
+		left: 0;
+		transition: all .4s ease-out;
+
+		width: 100%;
+		height: 100%;
+
+		display: block;
+		transform-origin: bottom ;
+		
+		padding: 25%;
+		
+		font-size: resize(18, 14);
+		font-weight: 700;
+
+		text-transform: capitalize;
+	}
+
+	
+	&__trending-link:not(:has(.main__trending-image-job)):hover::after{
+		content: "NFT Image, click to get this";
+		background-color: #0006;
+		transform: scaleY(0.9);
+	}
+}
