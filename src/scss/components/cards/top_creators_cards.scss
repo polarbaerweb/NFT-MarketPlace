@@ -1,45 +1,121 @@
 .main {
-	&__top-creators {}
+	&__top-creators-top {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		width: 100%;
+	}
+
+	&__top-creator-text-box{
+		flex: 1 1 auto !important;
+	}
+
+	&__top-creators-container {
+		display: grid;
+		grid-template-columns: repeat(4, 240px);
+		grid-auto-rows: 1fr;
+		gap: resize(30, 20);
+		justify-content: space-between;
+		@include breakpoint("laptop", 429){
+			grid-template-columns: repeat(2, 1fr);
+			grid-auto-rows: 60px;
+		}
+		
+		@include breakpoint("tablet"){
+			grid-template-columns: repeat(1, 1fr);
+			grid-auto-rows: 80px;
+			gap: resize(50, 40);
+		}
+	}
 
 
-	&__top-creators-top {}
+	&__top-creators-info {
+		width: 100%;
+		height: 100%;
+		padding: 30px;
+		border-radius: 20px;
+		background-color: getColorByName("mn", "main-top-creator-card-bg-color");
+		@include breakpoint("laptop", 429){
+			padding: 30px;
+		}
+	}
 
+	&__top-creator-image-box {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		gap: resize(20, 10);
+		text-align: center;
+		position: relative;
 
-	&__text-box {}
+		@include breakpoint("laptop", 429){
+			flex-direction: row;
+			justify-content: space-between;
+		}
+	}
 
+	&__image-top-creator-title-box{
+		@include breakpoint("laptop", 429){
+			gap: 5px;
+			text-align: left;
+		}
+	}
 
-	&__text-box--lower-gap {}
+	&__top-creator-image{
+		width: 120px;
+		height: 120px;
+		@include breakpoint("laptop", 429){
+			width: 60px;
+			height: 60px;
+		}
+	}
 
+	&__top-creator-result-box {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		color: getColorByName("mn", "main-top-creator-sale-color");
+		font-family: $default-font-family;
+		font-size: resize(16, 12);
+		text-overflow:clip;
+		@include breakpoint("laptop", 429){
+			font-size: resize(12, 10);
+			line-height: 140%;
+		}
+	}
+	
+	&__top-creator-sale,
+	&__top-creator-number{
+		font-size: resize(14, 10);
+		@include breakpoint("laptop", 429){
+			font-size: resize(14, 8);
+		}
 
-	&__top-creator-title {}
+		@include breakpoint("tablet"){
+			font-size: resize(26, 22);
+		}
+	}
 
-
-	&__top-creator-text {}
-
-
-	&__top-creators-container {}
-
-
-	&__top-creators-info {}
-
-
-	&__top-creator-info-box {}
-
-
-	&__top-creator-image-box {}
-
-
-	&__image-title-box {}
-
-
-	&__image-title {}
-
-
-	&__top-creator-result-box {}
-
-
-	&__top-creator-sale {}
-
-
-	&__top-creator-number {}
+	&__top-creator-level{
+		position: absolute;
+		top: -20px;
+		left: -20px;
+		background-color: #fff;
+		width: 30px;
+		height: 30px;
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-family: $space-mono;
+		font-size: resize(16, 12);
+		font-style: normal;
+		font-weight: 400;
+		line-height: 140%;
+		color: #000;
+	}
 }
