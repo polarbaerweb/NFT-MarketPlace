@@ -1,0 +1,60 @@
+.main {
+	&__browse-image-box {
+		width: 100%;
+		min-height: 316px;
+		position: relative;
+		top: 0;
+		left: 0;
+	}
+	
+	&__browse-link{
+		position: relative;
+		top: 0;
+		left: 0;
+	}
+
+	&__browse-link:hover &__browse-image {
+		transition: all 900ms ease;
+		filter: blur(.3rem);
+	}
+
+	&__browse-link:hover &__browse-category-image img {
+		opacity: 1;
+		visibility: visible;
+	}
+	
+	&__browse-image {
+		width: 100%;
+		height: getHeightOfTheImage(100, 316);
+		border-radius: 20px;
+		
+		@include breakpoint("laptop", 29) {
+			height: getHeightOfTheImage(180, 316);
+		}
+	}
+	
+	&__browse-category-image{
+		width: 100px;
+		height: 100px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 8;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	&__browse-category-image img{
+		width: 90px;
+		opacity: 0;
+		visibility: hidden;
+	}
+
+	&__browse-category-title-box{
+		padding: 20px 30px 25px 30px;
+	}
+}

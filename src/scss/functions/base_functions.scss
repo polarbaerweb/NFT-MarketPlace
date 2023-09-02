@@ -29,3 +29,7 @@ $container-width: (
 	$half-width: (math.div($selected-container, $size-of-the-screen) * 100) * 1%;
 	@return $half-width;
 };
+
+@function getHeightOfTheImage($height, $max-height){
+	@return math.div(($height * 0.1), ($max-height * 0.1)) * 100vh;
+}

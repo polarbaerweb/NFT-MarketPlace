@@ -1,27 +1,12 @@
 .main {
-	&-section {
-		max-width: getWidthOfContainer("discover-digital-container");
-	};
 
-
-	&-section:not(:first-child){
-		margin: resize(80, 70) auto;
-		@include breakpoint("tablet"){}
+	&__discover-text-box{
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 20px;
 	}
-
-	&-section:first-child{
-		margin: resize(162, 130) auto 80px auto;
-		@include breakpoint("laptop", 146){
-			margin: resize(100, 85) auto 80px auto;
-		}
-	}
-
-	&-title {
-		@extend .main__discover-title;
-		line-height: 120%;
-		font-size: resize(38, 10);
-	}
-
+	
 	&__discover {
 		display: grid;
 		align-items: flex-start;
@@ -34,18 +19,6 @@
 		}
 	}
 
-
-	&__text-box {
-		flex: 0 1 resize(610, 450);
-		display: flex;
-		flex-direction: column;
-		align-items: flex-start;
-		gap: resize(30, 20);
-		overflow: hidden;
-		@include breakpoint("mobile_M", 270){
-			width: resize(330, 300);
-		}
-	}
 
 
 	&__discover-title {
@@ -61,16 +34,6 @@
 		}
 	}
 
-
-	&__text {
-		color: getColorByName("mn", "main-default-description-color");
-		font-family: $default-font-family;
-		font-size: resize(22, 18);
-		font-style: normal;
-		font-weight: 400;
-		line-height: 160%;
-		text-transform: capitalize;
-	}
 
 	&__achievements {
 		display: flex;
@@ -102,73 +65,12 @@
 			font-size: resize(22, 16);
 		}
 	}
-	
-
-	&__image-box {
-		max-width: 0 0 resize(510, 450);
-		background-color: getColorByName("mn", "main-image-background-color");
-		border-radius: 20px;
-		@include breakpoint("laptop", 29px){
-			width: 100%;
-		};
-	}
-
-	&__image-container{
-		width: 100%;
-		height: 401px;
-		@include breakpoint("laptop", 29px){
-			width: 100%;
-			height: 221px;
-		}
-	}
-
-	&__image {
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
-		border-radius: 20px 20px 0 0;
-	}
-
-
-	&__image-title-box {
-		display: flex;
-		flex-direction: column;
-		gap: 10px;
-	}
 
 	&__discover-title-box{
 		padding: resize(20, 15);
 	}
 
-	&__image-title{
-		font-family: $default-font-family;
-		font-size: resize(22, 18);
-		font-style: normal;
-		font-weight: 600;
-		line-height: 140%;
-		text-transform: capitalize;
-		color: getColorByName("mn", "main-image-title-color");
-		
-	}
-
-
-	&__image-author-box {
-		display: flex;
-		align-items: center;
-		gap: 12px;
-	}
-
-	&__image-author-name {
-		color: getColorByName("mn", "main-author-name-color");
-		font-family: $default-font-family;
-		font-size: resize(16, 10);
-		font-style: normal;
-		font-weight: 400;
-		line-height: 140%;
-	}
-	
-	&__image-author{
-		width: 24px;
-		height: 24px;
+	&__discover-image-box{
+		width: calc(100% + 10px);
 	}
 }

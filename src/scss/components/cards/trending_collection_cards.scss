@@ -7,46 +7,29 @@
 			padding: 0;
 		}
 	}
-	
-	&__text-box--lower-gap {
-		gap: 10px;
-		margin-bottom: 60px;
-		@include breakpoint("tablet"){
-			margin-bottom: 40px
-		}
-	}
 
 	&__trending-images {
-		display: grid;
-		grid-template-columns: repeat(3, 1fr);
-		grid-auto-rows: 1fr;
-		gap: 30px;
-		justify-content: space-between;
 		@include breakpoint("tablet"){
 			grid-template-columns: repeat(2, 1fr);
 		}
 		
 		@include breakpoint("mobile_L", 185){
-			grid-template-columns: repeat(1, min(100% + 30px));
+			grid-template-columns: repeat(1, min(100% + 10px));
 		}
 	}
 
-	&__trending-images-box {
+	&__trending-image-box {
 		width: 100%;
 		min-height: 525px;
-		display: flex;
-		flex-direction: column;
-		gap: 15px;
-		overflow: hidden;
 	}
 
-	&__trending-images-box:last-child{
+	&__trending-image-box:last-child{
 		@include breakpoint("tablet") {
 			display: none;
 		}
 	}
 
-	&__trending-images-box:nth-child(2){
+	&__trending-image-box:nth-child(2){
 		@include breakpoint("mobile_M"){
 			display: none;
 		}
@@ -54,9 +37,13 @@
 
 	&__trending-image {
 		width: 100%;
-		height: 350px;
+		height: getHeightOfTheImage(250, 525);
 		object-fit: cover;
 		border-radius: 20px;
+
+		@include breakpoint("laptop", 29){
+			height: getHeightOfTheImage(221, 250);
+		}
 	}
 
 
