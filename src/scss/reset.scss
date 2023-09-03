@@ -52,8 +52,11 @@ html{
 body{
 	width: 100vw;
 	height: 100vh;
-	overflow-x: hidden;
 	background-color: #000;
+	
+	@media (min-width: 1024px){
+		overflow: hidden;
+	}
 }
 
 
@@ -96,23 +99,30 @@ body.lock{
 	color: $default-section-description-color;
 }
 
-
 .main{
 	&-section {
 		max-width: getWidthOfContainer("discover-digital-container");
 	};
 
 	&-section:not(:first-child) {
-		margin: resize(80, 70) auto;
+		margin: resize(80, 40) auto;
+		padding: resize(80, 40) 0;
 		@include breakpoint("tablet") {}
 	}
 
 	&-section:first-child {
-		margin: resize(162, 130) auto 80px auto;
+		margin: resize(262, 130) auto 80px auto;
 		
 		@include breakpoint("laptop", 146) {
 			margin: resize(100, 85) auto 80px auto;
 		}
+	}
+
+	&-section-top{
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-between;
+		width: 100%;
 	}
 
 	&-title {
@@ -126,7 +136,7 @@ body.lock{
 		grid-auto-rows: 1fr;
 		gap: resize(30, 20);
 		justify-content: space-between;
-		grid-template-columns: repeat(4, 240px);
+		grid-template-columns: repeat(4, getWidthOfTheIImage(230));
 
 		@include breakpoint("laptop", 429) {
 			grid-template-columns: repeat(2, 1fr);
@@ -156,7 +166,6 @@ body.lock{
 	}
 
 	&__text-box {
-		flex: 0 1 resize(610, 450);
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;

@@ -1,7 +1,7 @@
 .main {
 	&__browse-image-box {
 		width: 100%;
-		min-height: 316px;
+		min-height: 350px;
 		position: relative;
 		top: 0;
 		left: 0;
@@ -12,22 +12,23 @@
 		top: 0;
 		left: 0;
 	}
-
+	
 	&__browse-link:hover &__browse-image {
-		transition: all 900ms ease;
-		filter: blur(.3rem);
+		transition: all 500ms ease;
+		filter: blur(.75rem);
 	}
-
-	&__browse-link:hover &__browse-category-image img {
+	
+	&__browse-link:hover &__browse-category-image {
+		transition: all 900ms ease;
 		opacity: 1;
 		visibility: visible;
 	}
 	
 	&__browse-image {
 		width: 100%;
-		height: getHeightOfTheImage(100, 316);
-		border-radius: 20px;
-		
+		height: getHeightOfTheImage(150, 350);
+		border-radius: 20px 20px 0px 0px;
+
 		@include breakpoint("laptop", 29) {
 			height: getHeightOfTheImage(180, 316);
 		}
@@ -39,17 +40,12 @@
 		position: absolute;
 		top: 0;
 		left: 0;
-		z-index: 8;
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%);
 		display: flex;
 		align-items: center;
 		justify-content: center;
-	}
-
-	&__browse-category-image img{
-		width: 90px;
 		opacity: 0;
 		visibility: hidden;
 	}

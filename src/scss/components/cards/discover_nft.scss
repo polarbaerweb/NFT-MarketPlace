@@ -1,0 +1,95 @@
+.main {
+	&__discover-nft-title {}
+
+
+	&__discover-nft-text {}
+
+
+	&__discover-nft-image-container {
+		grid-template-columns: repeat(3, getWidthOfTheIImage(330)) !important;
+		@include breakpoint("tablet", 235){
+			grid-template-columns: repeat(2, getWidthOfTheIImage(470)) !important;
+			justify-content: center;
+		}
+
+		@include breakpoint("tablet"){
+			grid-template-columns: repeat(1, 1fr) !important;
+		}
+	}
+
+
+	&__discover-nft-image-box {
+		width: 100%;
+		height: resize(469, 440);
+	}
+
+
+	&__discover-nft-link {
+		width: 100%;
+	}
+
+
+	&__discover-nft-image {
+		width: 100%;
+		height: getHeightOfTheImage(220, 469);
+		
+		@include breakpoint("tablet"){
+			height: getHeightOfTheImage(330, 469);
+		}
+	}
+
+
+	&__discover-nft-title-box {
+		padding: 25px 30px 20px 30px;
+		gap: resize(25, 15) !important;
+	}
+
+
+	&__discover-nft-title-top {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 10px;
+	}
+
+
+	&__discover-nft-title-bottom {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+
+	&__discover-nft-price-box {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 10px;
+	}
+
+
+	&__discover-nft-image-price {
+		color: getColorByName("mn", "main-discover-nft-price-color");
+		font-family: $space-mono;
+		font-size: resize(12, 8);
+		font-style: normal;
+		font-weight: 400;
+		line-height: 110%;
+	}
+
+
+	&__discover-nft-image-price-number {
+		font-family: $space-mono;
+		font-size: resize(16, 12);
+		font-style: normal;
+		font-weight: 400;
+		line-height: 140%;
+		color: getColorByName("mn", "main-discover-nft-number-color");
+	}
+
+
+	&__discover-nft-bid-box {
+		@extend .main__discover-nft-price-box;
+	}
+}

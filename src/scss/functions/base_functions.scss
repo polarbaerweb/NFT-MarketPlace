@@ -31,5 +31,9 @@ $container-width: (
 };
 
 @function getHeightOfTheImage($height, $max-height){
-	@return math.div(($height * 0.1), ($max-height * 0.1)) * 100vh;
+	@return math.div(($height * 0.1), ($max-height * 0.1)) * 80vh;
+}
+
+@function getWidthOfTheIImage($width){
+	@return math.div(($width * 0.1), ($discover-digital-container * 0.1)) * 70vw;
 }

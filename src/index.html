@@ -7,6 +7,30 @@
 	<div class="wrapper">
 		@include('html/base/header.html')
 		<main class="main">
+			<div class="main__scrollbar">
+				<div class="main__scrollbar-track">
+					<div class="main__scrollbar-thumb">
+						<div class="spider">
+							<div class="spiderweb"></div>
+							<div class="body">
+								<div class="eye left"></div>
+								<div class="eye right"></div>
+								<div class="mouth"></div>
+							</div>
+							<div class="legs left">
+								<div class="leg"></div>
+								<div class="leg"></div>
+								<div class="leg"></div>
+							</div>
+							<div class="legs right">
+								<div class="leg"></div>
+								<div class="leg"></div>
+								<div class="leg"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 			<div class="main__container">
 				<section class="main__discover main-section">
 					<div class="main__discover-text-box">
@@ -158,7 +182,7 @@
 					</div>
 				</section>
 				<section class="main__top-creators main-section">
-					<div class="main__top-creators-top">
+					<div class="main-section-top">
 						<div class="main__text-box main__top-creator-text-box main__text-box--lower-gap">
 							<h3 class="main__top-creator-title main-title">
 								Top creators
@@ -435,10 +459,8 @@
 					<div class="main__browse-category-container main-grid-container">
 						<figure class="main__browse-image-box main__image-box">
 							<a href="" class="main__browse-link">
-								<img src="@img/content/trending-images/discko-machine-big.jpg" alt="category image" class="main__browse-image">
-								<div class="main__browse-category-image">
-									<img src="@img/content/categories/PaintBrush.svg" alt="browse image">
-								</div>
+								<img src="@img/content/browse-image/Image Placeholder.jpg" alt="category image" class="main__browse-image">
+								<img src="@img/content/categories/PaintBrush.svg" alt="browse image" class="main__browse-category-image">
 							</a>
 							<figcaption class="main__image-title-box main__browse-category-title-box">
 								<h4 class="main__image-title">
@@ -448,100 +470,264 @@
 						</figure>
 						<figure class="main__browse-image-box main__image-box">
 							<a href="" class="main__browse-link">
-								<img src="@img/content/trending-images/discko-machine-big.jpg" alt="category image" class="main__browse-image">
-								<div class="main__browse-category-image">
-									<img src="@img/content/categories/PaintBrush.svg" alt="browse image">
-								</div>
+								<img src="@img/content/browse-image/Image Placeholder (1).jpg" alt="category image" class="main__browse-image">
+								<img src="@img/content/categories/Swatches.svg" alt="browse image" class="main__browse-category-image">
 							</a>
 							<figcaption class="main__image-title-box main__browse-category-title-box">
 								<h4 class="main__image-title">
-									Art
+									Collectibles
 								</h4>
 							</figcaption>
 						</figure>
 						<figure class="main__browse-image-box main__image-box">
 							<a href="" class="main__browse-link">
-								<img src="@img/content/trending-images/discko-machine-big.jpg" alt="category image" class="main__browse-image">
-								<div class="main__browse-category-image">
-									<img src="@img/content/categories/PaintBrush.svg" alt="browse image">
-								</div>
+								<img src="@img/content/browse-image/Image Placeholder (2).jpg" alt="category image" class="main__browse-image">
+								<img src="@img/content/categories/MusicNotes.svg" alt="browse image" class="main__browse-category-image">
 							</a>
 							<figcaption class="main__image-title-box main__browse-category-title-box">
 								<h4 class="main__image-title">
-									Art
+									Music
 								</h4>
 							</figcaption>
 						</figure>
 						<figure class="main__browse-image-box main__image-box">
 							<a href="" class="main__browse-link">
-								<img src="@img/content/trending-images/discko-machine-big.jpg" alt="category image" class="main__browse-image">
-								<div class="main__browse-category-image">
-									<img src="@img/content/categories/PaintBrush.svg" alt="browse image">
-								</div>
+								<img src="@img/content/browse-image/Image Placeholder (3).jpg" alt="category image" class="main__browse-image">
+								<img src="@img/content/categories/Camera.svg" alt="browse image" class="main__browse-category-image">
 							</a>
 							<figcaption class="main__image-title-box main__browse-category-title-box">
 								<h4 class="main__image-title">
-									Art
+									Photography
 								</h4>
 							</figcaption>
 						</figure>
 						<figure class="main__browse-image-box main__image-box">
 							<a href="" class="main__browse-link">
-								<img src="@img/content/trending-images/discko-machine-big.jpg" alt="category image" class="main__browse-image">
-								<div class="main__browse-category-image">
-									<img src="@img/content/categories/PaintBrush.svg" alt="browse image">
-								</div>
+								<img src="@img/content/browse-image/Image Placeholder (4).jpg" alt="category image" class="main__browse-image">
+								<img src="@img/content/categories/VideoCamera.svg" alt="browse image" class="main__browse-category-image">
 							</a>
 							<figcaption class="main__image-title-box main__browse-category-title-box">
 								<h4 class="main__image-title">
-									Art
+									Video
 								</h4>
 							</figcaption>
 						</figure>
 						<figure class="main__browse-image-box main__image-box">
 							<a href="" class="main__browse-link">
-								<img src="@img/content/trending-images/discko-machine-big.jpg" alt="category image" class="main__browse-image">
-								<div class="main__browse-category-image">
-									<img src="@img/content/categories/PaintBrush.svg" alt="browse image">
-								</div>
+								<img src="@img/content/browse-image/Image Placeholder (5).jpg" alt="category image" class="main__browse-image">
+								<img src="@img/content/categories/MagicWand.svg" alt="browse image" class="main__browse-category-image">
 							</a>
 							<figcaption class="main__image-title-box main__browse-category-title-box">
 								<h4 class="main__image-title">
-									Art
+									Utility
 								</h4>
 							</figcaption>
 						</figure>
 						<figure class="main__browse-image-box main__image-box">
 							<a href="" class="main__browse-link">
-								<img src="@img/content/trending-images/discko-machine-big.jpg" alt="category image" class="main__browse-image">
-								<div class="main__browse-category-image">
-									<img src="@img/content/categories/PaintBrush.svg" alt="browse image">
-								</div>
+								<img src="@img/content/browse-image/Image Placeholder (6).jpg" alt="category image" class="main__browse-image">
+								<img src="@img/content/categories/Basketball.svg" alt="browse image" class="main__browse-category-image">
 							</a>
 							<figcaption class="main__image-title-box main__browse-category-title-box">
 								<h4 class="main__image-title">
-									Art
+									Sport
 								</h4>
 							</figcaption>
 						</figure>
 						<figure class="main__browse-image-box main__image-box">
 							<a href="" class="main__browse-link">
-								<img src="@img/content/trending-images/discko-machine-big.jpg" alt="category image" class="main__browse-image">
-								<div class="main__browse-category-image">
-									<img src="@img/content/categories/PaintBrush.svg" alt="browse image">
-								</div>
+								<img src="@img/content/browse-image/Image Placeholder (7).jpg" alt="category image" class="main__browse-image">
+								<img src="@img/content/categories/Planet.svg" alt="browse image" class="main__browse-category-image">
 							</a>
 							<figcaption class="main__image-title-box main__browse-category-title-box">
 								<h4 class="main__image-title">
-									Art
+									Virtual Worlds
 								</h4>
 							</figcaption>
 						</figure>
 					</div>
 				</section>
+				<section class="main__discover-nft main-section">
+					<div class="main-section-top">
+						<div class="main__text-box main__discover-nft-text-box main__text-box--lower-gap">
+							<h3 class="main__discover-nft-title main-title">
+								Discover More NFTs
+							</h3>
+							<p class="main__discover-nft-text section-description">
+								Discover More Trending NFTs
+							</p>
+						</div>
+						<button class="navigation-button button-outlined">
+							<a href="" class="_icon-eye button-flexed button-outlined-link">See All</a>
+						</button>
+					</div>
+					<div class="main__discover-nft-image-container main__image-grid-container">
+						<figure class="main__discover-nft-image-box main__image-box">
+							<a href="" class="main__discover-nft-link">
+								<img src="@img/content/discover-nft/1.jpg" alt="distant galaxy" class="main__discover-nft-image">
+							</a>
+							<figcaption class="main__discover-nft-title-box main__image-title-box ">
+								<div class="main__discover-nft-title-top">
+									<h5 class="main__image-title">
+										Distant Galaxy
+									</h5>
+									<div class="main__image-author-box">
+										<img src="@img/icons/authors/MoonDancer.svg" alt="author image" class="main__image-author">
+										<p class="main__image-author-name">
+											MoonDancer
+										</p>
+									</div>
+								</div>
+								<div class="main__discover-nft-title-bottom">
+									<div class="main__discover-nft-price-box">
+										<h6 class="main__discover-nft-image-price">
+											Price
+										</h6>
+										<p class="main__discover-nft-image-price-number">
+											1.63 ETH
+										</p>
+									</div>
+									<div class="main__discover-nft-bid-box">
+										<h6 class="main__discover-nft-image-price">
+											Highest Bid
+										</h6>
+										<p class="main__discover-nft-image-price-number">
+											0.33 wETH
+										</p>
+									</div>
+								</div>
+							</figcaption>
+						</figure>
+						<figure class="main__discover-nft-image-box main__image-box">
+							<a href="" class="main__discover-nft-link">
+								<img src="@img/content/discover-nft/2.jpg" alt="distant galaxy" class="main__discover-nft-image">
+							</a>
+							<figcaption class="main__discover-nft-title-box main__image-title-box ">
+								<div class="main__discover-nft-title-top">
+									<h5 class="main__image-title">
+										Life On Edena
+									</h5>
+									<div class="main__image-author-box">
+										<img src="@img/icons/authors/NebulaKid.svg" alt="author image" class="main__image-author">
+										<p class="main__image-author-name">
+											NebulaKid
+										</p>
+									</div>
+								</div>
+								<div class="main__discover-nft-title-bottom">
+									<div class="main__discover-nft-price-box">
+										<h6 class="main__discover-nft-image-price">
+											Price
+										</h6>
+										<p class="main__discover-nft-image-price-number">
+											1.63 ETH
+										</p>
+									</div>
+									<div class="main__discover-nft-bid-box">
+										<h6 class="main__discover-nft-image-price">
+											Highest Bid
+										</h6>
+										<p class="main__discover-nft-image-price-number">
+											0.33 wETH
+										</p>
+									</div>
+								</div>
+							</figcaption>
+						</figure>
+						<figure class="main__discover-nft-image-box main__image-box">
+							<a href="" class="main__discover-nft-link">
+								<img src="@img/content/discover-nft/3.jpg" alt="distant galaxy" class="main__discover-nft-image">
+							</a>
+							<figcaption class="main__discover-nft-title-box main__image-title-box ">
+								<div class="main__discover-nft-title-top">
+									<h5 class="main__image-title">
+										AstorFiction
+									</h5>
+									<div class="main__image-author-box">
+										<img src="@img/icons/authors/SpaceOne.svg" alt="author image" class="main__image-author">
+										<p class="main__image-author-name">
+											Spaceone
+										</p>
+									</div>
+								</div>
+								<div class="main__discover-nft-title-bottom">
+									<div class="main__discover-nft-price-box">
+										<h6 class="main__discover-nft-image-price">
+											Price
+										</h6>
+										<p class="main__discover-nft-image-price-number">
+											1.63 ETH
+										</p>
+									</div>
+									<div class="main__discover-nft-bid-box">
+										<h6 class="main__discover-nft-image-price">
+											Highest Bid
+										</h6>
+										<p class="main__discover-nft-image-price-number">
+											0.33 wETH
+										</p>
+									</div>
+								</div>
+							</figcaption>
+						</figure>
+					</div>
+				</section>
+				<section class="main__auction _ibg">
+					<img src="@img/content/NFT Highlight (1).png" alt="coming soon background image" class="main__auction-bg">
+					<div class="main__auction-body">
+						<div class="main__auction-left">
+							<div class="main__image-author-box">
+								<img src="@img/icons/authors/MoonDancer.svg" alt="author image" class="main__image-author">
+								<p class="main__image-author-name">
+									MoonDancer
+								</p>
+							</div>
+							<h3 class="main__coming-soon-title main-title">
+								Discover More NFTs
+							</h3>
+							<button class="navigation-button main__auction-btn">
+								<a href="" class="_icon-eye button-flexed">
+									See NFT
+								</a>
+							</button>
+						</div>
+						<div class="main__auction-right">
+							<h4 class="main__auction-clock-title">
+								Auction ends in:
+							</h4>
+							<div class="main__auction-clock">
+								<div class="main__auction-clock-measure">
+									<p class="main__auction-clock-number">
+										59
+									</p>
+									<h6 class="main__auction-clock-measure-title">
+										Hours
+									</h6>
+								</div>
+								<div class="main__auction-clock-measure">
+									<p class="main__auction-clock-number">
+										59
+									</p>
+									<h6 class="main__auction-clock-measure-title">
+										Minutes
+									</h6>
+								</div>
+								<div class="main__auction-clock-measure">
+									<p class="main__auction-clock-number">
+										59
+									</p>
+									<h6 class="main__auction-clock-measure-title">
+										Seconds
+									</h6>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
 			</div>
+			
 		</main>
-		@include('html/base/footer.html')
+		<!-- @include('html/base/footer.html') -->
 	</div>
 
 	<script src="js/app.min.js" defer></script>

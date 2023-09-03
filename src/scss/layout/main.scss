@@ -15,7 +15,7 @@
 		gap: resize(30, 20);
 		@include breakpoint("laptop", 146){
 			display: grid;
-			grid-template-columns: repeat(1, 100%);
+			grid-template-columns: repeat(1, min(100% + 10px));
 		}
 	}
 
