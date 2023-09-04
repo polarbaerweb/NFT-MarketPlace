@@ -5,7 +5,7 @@
   "main": "gulpfile.js",
   "type": "module",
   "scripts": {
-	"dev": "npx gulp"
+    "dev": "npx gulp"
   },
   "author": "polarbear",
   "license": "ISC",

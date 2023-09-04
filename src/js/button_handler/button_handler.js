@@ -11,6 +11,7 @@ document.documentElement.addEventListener( "click", function ( event )
 
 	const isButton = parentElement.contains( "navigation-button" )
 		|| target.contains( "navigation-button" )
+		|| event.target.tagName === "A"
 
 	if ( isButton)
 	{

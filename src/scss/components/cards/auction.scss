@@ -1,17 +1,18 @@
 .main {
+	&__auction{
+		padding: 0 0 60px 0 !important;
+		width: 100% !important;
+		height: resize(600, 560) !important;
 
-	// &__auction{
-	// 	width: 100vw !important;
-	// 	height: 100vh !important;
-	// 	background-color: #fff;
-	// 	z-index: -1;
-	// }
+		@include breakpoint("tablet"){
+			padding: 0;
+		}
+	}
 
 	._ibg{
 		position: relative;
 		top: 0;
 		right: 0;
-		height: resize(660, 600);
 		width: 100%;
 		height: 100%;
 	}
@@ -22,29 +23,126 @@
 		right: 0;
 		object-fit: cover;
 		width: 100%;
-		height: 100%;
-		filter: brightness(0.5);
+		height: getHeightOfTheImage(600, 600);
+		filter:blur(1rem) brightness(0.5);
+		transform: scale(1.1);
+		border-radius: 20px;
+		z-index: -1;
 	}
 
-	&__auction-image-box {}
+	&__auction-body {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		align-items: flex-end;
+		padding: 0 resize(115, 100);
+		gap: 40px;
 
-	&__auction-body {}
+		@include breakpoint("tablet"){
+			padding: 0;
+			flex-direction: column;
+			gap: 30px;
+			align-items: flex-start;
+			justify-content: center;
+		}
+	}
 
-	&__auction-left {}
+	&__auction-left {
+		display: flex;
+		flex-direction: column;
+		gap: resize(30, 20);
+		flex: 1 1 auto;
 
-	&__coming-soon-title {}
+		@include breakpoint("tablet"){
+			flex: 0;
+		}
+	}
 
-	&__auction-btn {}
+	&__coming-soon-title {
+		font-family: $default-font-family;
+		font-size: resize(51, 41) !important;
+		font-style: normal;
+		font-weight: 600;
+		line-height: 110%;
+		text-transform: capitalize;
+	}
 
-	&__auction-right {}
+	&__auction-btn {
+		width: resize(198, 168);
+		font-size: resize(12, 10);
+	}
 
-	&__auction-clock-title {}
 
-	&__auction-clock {}
+	&__auction-right {
+		flex: 1 1 fit-content;
+		height: resize(147, 117);
+		padding: resize(30, 20);
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+		background-color: rgba(#3B3B3B, 0.1);
+		border-radius: 20px;
 
-	&__auction-clock-measure {}
+		@include breakpoint("tablet"){
+			flex: 0;
+			padding: 0;
+			background-color: transparent;
+		}
+	}
 
-	&__auction-clock-number {}
+	&__auction-clock-title {
+		color: #fff;
+		font-family: $space-mono;
+		font-size: resize(12, 10);
+		font-style: normal;
+		font-weight: 400;
+		line-height: 110%;
+	}
 
-	&__auction-clock-measure-title {}
+	&__auction-clock {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+	}
+	
+	&__auction-clock-measure {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		gap: 10px;
+		color: var(--Text, #FFF);
+		font-family: Space Mono;
+		font-size: 38px;
+		font-style: normal;
+		font-weight: 700;
+		text-transform: capitalize;
+	}
+	
+	
+	
+	&__auction-clock-number {
+		line-height: 120%;
+	}
+	
+
+	.dot{
+		display: flex;
+		align-items: flex-start;
+		gap: 10px;
+	}
+
+	.dot::before,
+	.dot::after {
+		content: ":";
+	}
+
+
+	&__auction-clock-measure-title {
+		color: #fff;
+		font-family: $space-mono;
+		font-size: resize(12, 10);
+		font-style: normal;
+		font-weight: 400;
+		line-height: 110%;
+	}
 }
