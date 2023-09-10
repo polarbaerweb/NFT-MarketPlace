@@ -1,0 +1,45 @@
+.main {
+	&__question {
+	}
+	&__question-text-box {}
+
+	&__question-title {}
+
+	&__question-text {
+		text-align: center;
+	}
+
+	&__question-image-grid-container{
+		@include breakpoint("tablet"){
+			grid-template-columns: repeat(1, minmax(50%, 1fr));
+		}
+	}
+
+	&__question-image-box{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: resize(20,10);
+		padding: resize(30, 20);
+	}
+
+	&__question-image-box img{
+		border-radius: 50%;
+		background: transparent;
+		width: getWidthOfTheIImage(250);
+		height: getHeightOfTheImage(250, 439);
+
+		@include breakpoint("tablet"){
+			width: 100%;
+		}
+	}
+
+	&__question-title-box {
+		text-align: center;
+	}
+
+	&__question-description {
+		@extend .section-description;
+		font-size: resize(16, 12) !important;
+	}
+}

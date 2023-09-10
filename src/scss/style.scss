@@ -3,6 +3,7 @@
 @import "./color/header_color";
 @import "./color/main_color";
 @import "./color/button_color";
+@import "./color/footer_color";
 
 // container width
 @import "./container_width";
@@ -26,7 +27,6 @@
 @import "./components/error/base_error";
 @import "./components/modal/base_modal";
 @import "./components/success/base_success";
-@import "./components/scrollbar/scrollbar";
 
 
 // reset
@@ -37,6 +37,8 @@
 @import "./layout/header";
 @import "./layout/main";
 @import "./layout/footer";
+@import "./layout/registration";
+@import "./layout/detail";
 
 // features
 @import "./features/login/login";

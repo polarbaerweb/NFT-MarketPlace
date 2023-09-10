@@ -1,0 +1,112 @@
+.main {
+	&__join-image-box{
+		padding: resize(60, 50);
+		display: flex;
+		align-items: flex-start;
+		flex-direction: row !important;
+		gap: resize(40, 30) !important;
+
+		@include breakpoint("tablet"){
+			flex-direction: column !important;
+			align-items: center;
+			height: fit-content;
+			padding: 4em 3rem;
+			gap: resize(30, 20);
+		}
+	}
+
+	&__join-image {
+		width: getWidthOfTheIImage(425);
+		border-radius: resize(22, 20);
+
+		@include breakpoint("tablet"){
+			width: 100%;
+		}
+	}
+
+	&__join-image-title-box {
+		flex: 0 1 resize(425, 300);
+
+		@include breakpoint("tablet"){
+			flex: 1 1 auto;
+		}
+	}
+
+	&__join-image-title-box-top {
+		gap: 4rem;
+		@include breakpoint("tablet"){
+			gap: 2rem;
+		}
+	}
+
+	&__join-image-title {
+		color: #fff;
+		font-family: $default-font-family;
+		font-size: resize(38, 28) !important;
+		font-style: normal;
+		font-weight: 600;
+		line-height: 120% !important;
+	}
+
+	&__join-text {
+		color: #fff;
+		font-family: $default-font-family;
+		font-size: resize(22, 16) !important;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 160% !important;
+		text-transform: capitalize;
+	}
+
+	&__join-image-form {
+		display: flex;
+		flex-direction: row;
+
+		@include breakpoint("tablet"){
+			flex-direction: column;
+		}
+	}
+
+	&__join-input{
+		width: getWidthOfTheIImage(325);
+		height: resize(60, 40);
+		padding: 2rem 5rem 2rem 1rem !important;
+		border-radius: resize(15, 10);
+		font-size: 1.8rem;
+
+		@include breakpoint("tablet"){
+			width: 100%;
+			padding: 2rem;
+		}
+		
+	}
+	
+	&__join-input:focus::placeholder{
+		color: #000;
+		font-weight: 700;
+		font-family: $default-font-family;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 140%;
+	}
+
+	.suggestion{
+		color: #1c1c1c;
+		font-weight: 700;
+		margin-left: 1.5rem;
+		padding: 0 !important;
+		font-size: 1.5rem;
+	}
+
+	&__join-button{
+		padding: resize(20, 15) resize(40, 35);
+		width: 24.6rem;
+		height: resize(60, 40);
+		left: -3rem;
+
+		@include breakpoint("tablet"){
+			left: 0;
+			width: 100%;
+		}
+	}
+}

@@ -3,7 +3,7 @@
 $area: (
 	"hd": $header-color,
 	"mn": $main-color,
-	// "ft": $footer-color,
+	"ft": $footer-color,
 	"button": $button-color,
 );
 
@@ -31,9 +31,9 @@ $container-width: (
 };
 
 @function getHeightOfTheImage($height, $max-height){
-	@return math.div(($height * 0.1), ($max-height * 0.1)) * 80vh;
+	@return math.div(($height * 0.1), ($max-height * 0.1)) * 70dvh;
 }
 
 @function getWidthOfTheIImage($width){
-	@return math.div(($width * 0.1), ($discover-digital-container * 0.1)) * 70vw;
+	@return math.div(($width * 0.1), ($discover-digital-container * 0.1)) * 70dvw;
 }

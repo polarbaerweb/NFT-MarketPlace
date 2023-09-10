@@ -1,14 +1,17 @@
 const scrollbarTrack = document.querySelector(".main__scrollbar-track");
-const scrollbarThumb = document.querySelector(".main__scrollbar-thumb");
-const main__container = document.querySelector( ".main__container" );
+const scrollbarThumb = document.querySelector( ".main__scrollbar-thumb" );
+const main__scrollbar = document.querySelector(".main__scrollbar")
+const screen = document.body.querySelector( ".wrapper" )
+const main__container = document.querySelector(".main__container")
 const spiderweb = document.querySelector( ".spiderweb" )
 const spider_web_height = parseInt(getComputedStyle(spiderweb).height)
 const body = document.querySelector( ".body" )
-const message = document.querySelector(".message")
 
-main__container.addEventListener("scroll", () => {
-	const scrollPercentage = (main__container.scrollTop / (main__container.scrollHeight - main__container.clientHeight)) * 100;
+screen.addEventListener("scroll", () => {
+	const scrollPercentage = (screen.scrollTop / (screen.scrollHeight - screen.clientHeight)) * 100;
 	const thumbPosition =(scrollbarTrack.clientHeight - scrollbarThumb.clientHeight) * (scrollPercentage / 100);
+
+	console.log(thumbPosition)
 
 	scrollbarThumb.style.transform = `translateY(${ thumbPosition }px)`;
 	spiderweb.style.height = ((thumbPosition * 10) / 100 ) + spider_web_height + "px"
@@ -34,10 +37,10 @@ spiderweb.addEventListener("mousedown", (e) => {
 
 		if (thumbY >= 0 && thumbY <= scrollbarTrack.clientHeight - scrollbarThumb.clientHeight) {
 		const scrollPercentage = (thumbY / (scrollbarTrack.clientHeight - scrollbarThumb.clientHeight)) * 100;
-		const scrollPosition = (scrollPercentage / 100) * (main__container.scrollHeight - main__container.clientHeight);
+		const scrollPosition = (scrollPercentage / 100) * (screen.scrollHeight - screen.clientHeight);
 
 		scrollbarThumb.style.transform = `translateY(${thumbY}px)`;
-		main__container.scrollTop = scrollPosition;
+		screen.scrollTop = scrollPosition;
 		}
 	}
 
@@ -50,3 +53,6 @@ spiderweb.addEventListener("mousedown", (e) => {
 		audio.muted()
 	}
 });
+
+
+main__scrollbar.style.height = `${screen.height}px`

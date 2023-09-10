@@ -2,16 +2,16 @@ $list-item-vertical-padding: 5px;
 
 .header {
 	position: fixed;
-	background-color: getColorByName("hd", "header-bg-color");
 	top: 0;
 	left: 0;
+	background-color: getColorByName("hd", "header-bg-color");
 	padding: resize(15, 10) 0;
-	z-index: 1;
+	z-index: 10;
 	height: 100px;
 	width: 100%;
 
 	@include breakpoint("mobile_M"){
-		height: 50px;
+		// height: 5rem;
 	}
 	
 	&__container {
@@ -41,6 +41,7 @@ $list-item-vertical-padding: 5px;
 		font-size: resize(19, 14);
 		font-family: $space-mono;
 		line-height: 140%;
+		text-transform: capitalize;
 	}
 
 	&__navigation {
@@ -66,19 +67,8 @@ $list-item-vertical-padding: 5px;
 		}
 	}
 
-	
-	&__list {
-		height: 100%;
+	&__list{
 		width: 100%;
-		display: flex;
-		align-items: center;
-		justify-content: flex-end;
-		flex-wrap: wrap;
-		@include breakpoint {
-			opacity: 0;
-			visibility: hidden;
-
-		}
 	}
 	
 	&__list--active{
@@ -100,58 +90,10 @@ $list-item-vertical-padding: 5px;
 		}
 	}
 
-	&__list-item {
-		padding: $list-item-vertical-padding resize(8, 6);
-		background-color: rgba(0, 0, 0, 0);
-		position: relative;
-	}
-
-	&__list-item::before{
-		content: "";
-		display: block;
-		width: 0;
-		height: 0;
-	}
 	
-	&__list-item:not(:last-child):hover::before{
-		transition: all .3s ease-in-out;
-		position: absolute;
-		top: 100%;
-		left: resize(8, 6);
-		content: "";
-		width: 60%;
-		height: 1px;
-		background-color: getColorByName("hd", "header-link-hover");
-	}
-
-	&__link {
-		color: getColorByName("hd", "header-link-color");
-		font-size: resize(16, 10);
-		font-style: normal;
-		font-weight: 600;
-	}
-
-	&__auth{
-		padding: 0 resize(30, 20);
-	}
 
 };
 
-// .header:hover{
-// 	animation: 400ms linear scale;
-// }
-
-// @keyframes scale {
-// 	50%{
-// 		transform: scale(0.999);
-// 	}
-	
-// 	100%{
-// 		transform: scale(1);
-// 	}
-// }
-
-// base burger-style
 .burger {
 	z-index: 2;
 	display: none;
@@ -160,15 +102,15 @@ $list-item-vertical-padding: 5px;
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		width: 24;
-		height: 24px;
+		width: 2.4rem;
+		height: 2.4rem;
 
 		&__item{
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
 			align-items: flex-start;
-			gap: 5px;
+			gap: 0.5rem;
 			position: relative;
 			top: 0;
 			left: 0;
@@ -185,7 +127,7 @@ $list-item-vertical-padding: 5px;
 			&::before {
 				transform: rotate(45deg);
 				position: relative;
-				top: 1px;
+				top: .1rem;
 				left: 0;
 			}
 	
@@ -203,7 +145,7 @@ $list-item-vertical-padding: 5px;
 			content: "";
 			display: inline-block;
 			width: resize(12.75, 9);
-			height: .5px;
+			height: .1rem;
 			background-color: #fff;
 			transition: all .4s ease-in-out;
 		};

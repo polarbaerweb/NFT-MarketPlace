@@ -17,4 +17,24 @@ document.documentElement.addEventListener( "click", function ( event )
 	{
 		audio.play()
 	} 
+} )
+
+
+
+document.documentElement.addEventListener( "click", function ( event )
+{
+	/*
+		Save token to clipboard
+	*/
+
+	const main_detail_button_token = event.target.classList
+
+	console.log(main_detail_button_token.contains( "main__detail-token" ) )
+
+	if ( main_detail_button_token.contains( "main__detail-token" ) )
+	{
+		const token = String(event.target.dataset.token)
+		navigator.clipboard.writeText( token )
+		console.log("copied")
+	}
 })

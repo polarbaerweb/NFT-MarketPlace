@@ -1,0 +1,1 @@
+import * as input from "./input.js"

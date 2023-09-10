@@ -1,0 +1,38 @@
+<section class="main__registration">
+	<div class="main__registration-image-box">
+		<img src="@img/content/registration.jpg" alt="" class="main__registration-img">
+	</div>
+	<form action="#" method="post" class="main__registration-form">
+		<div class="main__registration-text-box">
+			<H2 class="main-title main__registration-title">
+				Create Account
+			</H2>
+			<p class="main__registration-text section-description">
+				Welcome! enter your details and start creating, collecting and selling NFTs.
+			</p>
+		</div>
+		<div class="main__registration-inputs">
+			<div class="main__registration-input-box">
+				<label for="username" class="main__registration-label _icon-user"></label>
+				<input type="text" class="main__registration-input" name="username" id="username" placeholder="username" autocomplete="off" required autofocus>
+			</div>
+			<div class="main__registration-input-box">
+				<label for="email" class="main__registration-label _icon-email"></label>
+				<input type="email" class="main__registration-input" name="email" id="email" placeholder="email address" autocomplete="off" required autofocus>
+			</div>
+			<div class="main__registration-input-box">
+				<label for="password" class="main__registration-label _icon-lockKey"></label>
+				<input type="password" class="main__registration-input" name="password" id="password" placeholder="password" autocomplete="off" data-pattern="/^^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{7,15}$/" required autofocus>
+			</div>
+			<div class="main__registration-input-box">
+				<label for="password2" class="main__registration-label _icon-lockKey"></label>
+				<input type="password" class="main__registration-input" name="password2" id="password2" placeholder="confirm password" autocomplete="off" data-pattern="/^^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{7,15}$/" required autofocus>
+			</div>
+			<button type="submit" class="navigation-button main__registration-button">
+				<p href="#" class="button-flexed _icon-email">
+					create account
+				</p>
+			</button>
+		</div>
+	</form>
+</section>

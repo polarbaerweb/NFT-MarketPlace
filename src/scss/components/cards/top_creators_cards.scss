@@ -1,4 +1,10 @@
 .main {
+	&__top-creators-container{
+		@include breakpoint("tablet") {
+			grid-template-columns: repeat(1, 1fr);
+		}
+	}
+
 	&__top-creator-text-box{
 		flex: 1 1 auto !important;
 	}

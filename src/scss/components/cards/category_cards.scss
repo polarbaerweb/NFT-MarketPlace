@@ -5,6 +5,10 @@
 		position: relative;
 		top: 0;
 		left: 0;
+
+		@include breakpoint("tablet"){
+			min-height: 231px;
+		}
 	}
 	
 	&__browse-link{
@@ -27,7 +31,7 @@
 	&__browse-image {
 		width: 100%;
 		height: getHeightOfTheImage(150, 350);
-		border-radius: 20px 20px 0px 0px;
+		border-radius: resize(15, 10) resize(15, 10) 0px 0px;
 
 		@include breakpoint("laptop", 29) {
 			height: getHeightOfTheImage(180, 316);
@@ -52,5 +56,9 @@
 
 	&__browse-category-title-box{
 		padding: 20px 30px 25px 30px;
+
+		@include breakpoint("tablet"){
+			padding: 20px 20px 25px 20px;
+		}
 	}
 }

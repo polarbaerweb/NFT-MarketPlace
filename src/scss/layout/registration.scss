@@ -1,0 +1,130 @@
+.main {
+	margin: 0;
+
+	&__registration {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		align-items: center;
+		gap: 6rem;
+		@include breakpoint("laptop"){
+			flex-direction: column;
+			align-items: center;
+			gap: 3rem;
+		}
+	}
+
+	&__registration-image-box {
+		flex: 0 1 50%;
+		width: 100%;
+	}
+
+	&__registration-img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		filter: brightness(0.5);
+		@include breakpoint("laptop"){
+			width: 110dvw;
+		}
+	}
+
+	&__registration-form {
+		flex: 0 1 50%;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: center;
+		gap: 4rem;
+		
+		@include breakpoint("laptop"){
+			align-items: center;
+			width: max-content;
+			padding: 0 1rem;
+		}
+
+		position: relative;
+
+		top: 0;
+		left: 0;
+	}
+
+	&__registration-text-box {
+		width: 46rem;
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
+
+		@include breakpoint("laptop"){
+			width: 31.5rem;
+		}
+	}
+
+	&__registration-title{
+		font-size: resize(51, 38);
+	}
+
+	&__registration-text {
+		font-size: resize(22, 16);
+	}
+
+	&__registration-inputs {
+		display: flex;
+		flex-direction: column;
+		gap: resize(15, 10);
+	}
+
+	&__registration-input-box {
+		position: relative;
+		top: 0;
+		left: 0;
+		padding: 0 2rem;
+		background-color: #fff;
+		height: 4.6rem;
+		width: 33rem;
+		border-radius: 1rem !important;
+	}
+
+	&__registration-label {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 5.2rem;
+		height: 4.6rem;
+		background-color: #ccc;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 2rem;
+		border-radius: 1rem 0 0 1rem;
+	}
+
+	&__registration-input {
+		padding-left: 5.2rem;
+		width: 100%;
+		height: inherit;
+		font-family: $default-font-family;
+		font-size: 1.6rem;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 140%;
+		letter-spacing: .2rem;
+	}
+
+	&__registration-input::placeholder{
+		text-transform: capitalize;
+	}
+
+	&__registration-button {
+		width: 33rem;
+	}
+
+	&__registration-input::placeholder {
+		text-transform: capitalize;
+	}
+
+	.red::placeholder{
+		color: #8f0707;
+	}
+}
